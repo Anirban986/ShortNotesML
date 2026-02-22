@@ -1,0 +1,124 @@
+/* ===== Reuse Global Theme Variables ===== */
+:root {
+  --primary-blue: #2563eb;
+  --success-green: #16a34a;
+  --danger-red: #dc2626;
+  --warning-amber: #f59e0b;
+
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+
+  --border-light: #e2e8f0;
+  --bg-soft: #f8fafc;
+}
+
+/* ===== Layout Wrapper ===== */
+.score-ring-wrap {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid var(--border-light);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease-in-out;
+}
+
+.score-ring-wrap:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
+}
+
+/* ===== SVG Ring ===== */
+.ring-svg {
+  width: 160px;
+  height: 160px;
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: var(--bg-soft);
+  stroke-width: 10;
+}
+
+.ring-fill {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+
+  transition: stroke-dashoffset 0.6s ease-in-out;
+}
+
+/* Rotate text back */
+.ring-text,
+.ring-sub-text {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+  fill: var(--text-dark);
+}
+
+.ring-text {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ring-sub-text {
+  font-size: 11px;
+  fill: var(--text-light);
+  letter-spacing: 0.5px;
+}
+
+/* ===== Details Section ===== */
+.score-details {
+  flex: 1;
+  min-width: 240px;
+}
+
+/* Status */
+.score-status {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.score-hint {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+/* ===== Subject Bars ===== */
+.score-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.score-bar-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 45px;
+  align-items: center;
+  gap: 12px;
+}
+
+.score-bar-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.score-bar-track {
+  width: 100%;
+}
+
+.score-bar-pct {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+  text-align: right;
+}

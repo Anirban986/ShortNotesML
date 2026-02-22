@@ -1,0 +1,156 @@
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.page-sub {
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   COVERAGE BANNER
+========================================================= */
+
+.missing__banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  padding: 28px;
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.08),
+    rgba(59, 130, 246, 0.03)
+  );
+
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  margin-bottom: 36px;
+}
+
+.missing__banner-num {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--blue);
+  line-height: 1;
+}
+
+.missing__banner-label {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.missing__banner-progress {
+  flex: 1;
+  max-width: 420px;
+}
+
+.missing__banner-progress-label {
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.missing__banner-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   PRIORITY GROUP
+========================================================= */
+
+.missing__group {
+  margin-bottom: 36px;
+}
+
+.missing__group-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.missing__group-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+/* =========================================================
+   TOPIC ROW
+========================================================= */
+
+.missing__topic-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 18px;
+  margin-bottom: 12px;
+
+  border-radius: 12px;
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border, #e5e7eb);
+
+  transition: all 0.2s ease;
+}
+
+.missing__topic-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.missing__topic-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.missing__topic-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .missing__banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .missing__banner-progress {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .missing__topic-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
