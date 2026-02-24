@@ -1,7 +1,11 @@
 const app=require('./src/app');
 const dotenv=require('dotenv');
 dotenv.config();
-const PORT=process.env.PORT || 5000;
+const PORT=process.env.PORT || 3000;
+const connectDB=require("./src/db/db");
+
+
+connectDB();
 
 
 app.listen(PORT,()=>{
